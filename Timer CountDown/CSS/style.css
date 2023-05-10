@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+.mainBody {
+  background: url(/Img/background.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.blackShadowEffect {
+  padding-top: 5vmin;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textContent {
+  margin-top: 4vmin;
+  font-size: 3.5vw;
+  text-transform: uppercase;
+  letter-spacing: 0.4vw;
+}
+
+.watchColumnContainer {
+  margin-top: 9vmin;
+  width: 70%;
+  /* margin: auto; New Concept Learned */
+  /* margin: 0px auto; it will only align horizontally in flex box */
+  /*
+   When applying margin: auto; to a flex item (an item within a flex container), it centers the item both vertically and horizontally within the flex container.
+
+   When applying margin: auto; to a non-flex container element, it only centers the element horizontally within its parent container, without affecting the vertical alignment.
+   */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center; /* New Concept Learned */
+  /* 
+   By default, CSS properties are not inherited by child elements. Each element in the HTML document is considered an independent entity and can have its own styles.
+
+   However, there are certain CSS properties that are inherited by default from the parent to the children, such as font-family, color, text-align, and line-height. These properties are inherited by child elements unless they are overridden with a specific value.
+
+   properties like width, height, margin, padding, and position are not inherited by default. Each element needs to have these properties explicitly defined.
+    */
+}
+
+input {
+  height: 11vmin;
+  width: 18vmin;
+  text-align: center;
+  font-size: 7vmin;
+  border-radius: 1vmin;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  outline: none;
+}
+
+label {
+  font-size: 4vmin;
+}
+
+@media (max-width: 850px) {
+  .mainBody {
+    background-size: cover;
+  }
+}
